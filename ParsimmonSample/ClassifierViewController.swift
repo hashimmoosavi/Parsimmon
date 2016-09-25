@@ -103,12 +103,18 @@ class ClassifierViewController: UIViewController {
         
         for stopword in stopwords {
             
+            // Filtering stop word if it shows up in the middle of sentence
+            
             var regex = try! NSRegularExpression(pattern: " \\b" + stopword +  "\\b ", options: .caseInsensitive)
             trainingsentence = regex.stringByReplacingMatches(in: trainingsentence, options: [], range: NSRange(0..<trainingsentence.utf16.count), withTemplate: " ")
             
+            // Filtering stop word if it shows up at the beginning of sentence
+
             regex = try! NSRegularExpression(pattern: "\\b" + stopword +  "\\b ", options: .caseInsensitive)
             trainingsentence = regex.stringByReplacingMatches(in: trainingsentence, options: [], range: NSRange(0..<trainingsentence.utf16.count), withTemplate: "")
             
+            // Filtering stop word if it shows up at the end of sentence
+
             regex = try! NSRegularExpression(pattern: " \\b" + stopword +  "\\b", options: .caseInsensitive)
             trainingsentence = regex.stringByReplacingMatches(in: trainingsentence, options: [], range: NSRange(0..<trainingsentence.utf16.count), withTemplate: "")
         }
