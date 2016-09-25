@@ -57,7 +57,6 @@
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="parsimmonAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ZII-hu-FwW"/>
                                     <action selector="spamOrHamAction:" destination="kZO-iL-zml" eventType="touchUpInside" id="yo0-T3-dzh"/>
                                 </connections>
                             </button>
@@ -83,68 +82,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nN7-dV-UTz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-142" y="284"/>
-        </scene>
-        <!--Tagger-->
-        <scene sceneID="ufC-wZ-h7g">
-            <objects>
-                <viewController id="vXZ-lx-hvc" customClass="TaggerViewController" customModule="ParsimmonSample" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="qHp-tg-JiL"/>
-                        <viewControllerLayoutGuide type="bottom" id="Qet-rt-xAI"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ducks say quack and fish go blub." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ukM-MD-Hi4">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="lF0-1I-8uz"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZw-b3-SFq">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="203" id="yme-Aa-pnn"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGJ-Ll-Had">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="135" id="UPf-q5-ibP"/>
-                                    <constraint firstAttribute="height" constant="30" id="jrM-yx-7Mp"/>
-                                </constraints>
-                                <state key="normal" title="Parsimmon!">
-                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="parsimmonAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="sWr-Pw-pmO"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="ukM-MD-Hi4" firstAttribute="top" secondItem="qHp-tg-JiL" secondAttribute="bottom" id="AVE-cG-UjF"/>
-                            <constraint firstAttribute="centerX" secondItem="yGJ-Ll-Had" secondAttribute="centerX" id="Dlf-l7-G0B"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ukM-MD-Hi4" secondAttribute="trailing" constant="4" id="EPI-tC-Oof"/>
-                            <constraint firstItem="yGJ-Ll-Had" firstAttribute="top" secondItem="ukM-MD-Hi4" secondAttribute="bottom" constant="8" id="KJx-Vy-t0g"/>
-                            <constraint firstItem="SZw-b3-SFq" firstAttribute="top" secondItem="yGJ-Ll-Had" secondAttribute="bottom" constant="8" id="TEy-EJ-ata"/>
-                            <constraint firstItem="ukM-MD-Hi4" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="4" id="d3c-XI-i6b"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="SZw-b3-SFq" secondAttribute="trailing" constant="4" id="dfE-ri-GK2"/>
-                            <constraint firstItem="SZw-b3-SFq" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="4" id="wrE-qO-f92"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Tagger" id="HiV-2T-TZb"/>
-                    <connections>
-                        <outlet property="inputTextField" destination="ukM-MD-Hi4" id="QWH-V1-Inj"/>
-                        <outlet property="outputTextview" destination="SZw-b3-SFq" id="7cN-0l-Qjp"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-142" y="-385"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
