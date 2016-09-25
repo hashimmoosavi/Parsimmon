@@ -1,30 +1,6 @@
 # Parsimmon
 
-[![Build Status](https://travis-ci.org/ayanonagon/Parsimmon.svg?branch=master)](https://travis-ci.org/ayanonagon/Parsimmon)
-
-Parsimmon is a wee linguistics toolkit for iOS written in Swift.
-
-We currently support Swift 2.0. If you are looking for Objective-C, please use version 0.3.4 or earlier.
-
-
-## Toolkit
-
-Currently available tools:
-- Tokenizer
-- Tagger
-- Lemmatizer
-- Naive Bayes Classifier
-- Decision Tree (alpha)
-
-
-## Installation
-
-The easiest way to get started is to use [CocoaPods](http://cocoapods.org/) version 0.36 or higher. Just add the following line to your Podfile:
-
-```ruby
-pod 'Parsimmon', '~> 0.5.0'
-```
-
+Parsimmon is a wee linguistics toolkit for iOS written in Swift written by Ayaka Nonaka (https://github.com/ayanonagon). This toolkit has been modified by Hashim Moosavi to improve text classification of Naive Bayes through filtering by stop words, implementing TF IDF etc.
 
 ## Examples
 
@@ -139,10 +115,3 @@ License
 ----
 
 MIT
-
-Contributing
-----
-
-We’d love to see your ideas for improving this library! The best way to contribute is by submitting a pull request. We’ll do our best to respond to your patch as soon as possible. You can also submit a [new GitHub issue](https://github.com/ayanonagon/parsimmon/issues/new) if you find bugs or have questions. :octocat:
-
-Please make sure to follow our general coding style and add test coverage for new features!
