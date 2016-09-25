@@ -40,22 +40,35 @@ class ClassifierViewController: UIViewController {
             
             let trainingsentence = filteredSentence(sentence: sentence)
             
-            print(trainingsentence + " for work detail ")
+            //print(trainingsentence + " for work detail ")
 
             classifier.trainWithText(trainingsentence, category: "workdetail")
         }
         
         // START JOB
         
-        let startjob = ["Start job", "Open job", "Please start job for me", "Can you start the job right now", "Please begin job"]
+        let startjob = ["Start job", "Please start job for me", "Can you start the job right now", "Please begin job", "Can you start the job for me"]
         
         for sentence in startjob {
             
             let trainingsentence = filteredSentence(sentence: sentence)
 
-            print(trainingsentence + " for start jobs ")
+            //print(trainingsentence + " for start job ")
 
-            classifier.trainWithText(trainingsentence, category: "startjobs")
+            classifier.trainWithText(trainingsentence, category: "startjob")
+        }
+        
+        // OPEN JOB
+        
+        let openjob = ["Open job", "Please open job for me", "Can you open the job right now", "Please take me to the open job", "Can you open my job for me"]
+        
+        for sentence in openjob {
+            
+            let trainingsentence = filteredSentence(sentence: sentence)
+            
+            //print(trainingsentence + " for open jobs ")
+            
+            classifier.trainWithText(trainingsentence, category: "openjob")
         }
         
         // GREETING
@@ -65,7 +78,7 @@ class ClassifierViewController: UIViewController {
         for sentence in greeting {
             let trainingsentence = filteredSentence(sentence: sentence)
             
-            print(trainingsentence + " for greeting ")
+            //print(trainingsentence + " for greeting ")
             
             classifier.trainWithText(trainingsentence, category: "greeting")
         }
@@ -78,7 +91,7 @@ class ClassifierViewController: UIViewController {
 
             let trainingsentence = filteredSentence(sentence: sentence)
             
-            print(trainingsentence + " for start travel ")
+            //print(trainingsentence + " for start travel ")
 
             classifier.trainWithText(trainingsentence, category: "starttravel")
         }
@@ -91,7 +104,7 @@ class ClassifierViewController: UIViewController {
             
             let trainingsentence = filteredSentence(sentence: sentence)
             
-            print(trainingsentence + " for call ")
+            //print(trainingsentence + " for call ")
 
             classifier.trainWithText(trainingsentence, category: "call")
         }
