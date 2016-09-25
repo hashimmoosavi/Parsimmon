@@ -87,7 +87,7 @@ class ClassifierViewController: UIViewController {
         
         // CALL
         
-        let call = ["Call for help", "Call someone for help", "Help! Call someone", "Call Joe", "Call Friend"]
+        let call = ["Call for help", "Call someone for help", "Help! Call someone", "Call call", "Call Friend"]
         
         for sentence in call {
             
