@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.name     = 'Parsimmon'
   s.version  = '0.5.0'
 
-  s.ios.deployment_target = “10.0”
+  s.ios.deployment_target = "10.0"
   s.osx.deployment_target = "10.9"
   s.tvos.deployment_target = "9.0"
 
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.author = {
-    'Syed Ali Hashim Moosavi' => ‘hashim.moosavi@gmail.com’
+    'Syed Ali Hashim Moosavi' => 'hashim.moosavi@gmail.com'
   }
   s.source = {
     :git => 'https://github.com/hashimmoosavi/Parsimmon.git',
