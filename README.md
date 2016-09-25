@@ -1,6 +1,6 @@
 # Parsimmon
 
-Parsimmon is a wee linguistics toolkit for iOS written in Swift written by Ayaka Nonaka (https://github.com/ayanonagon). This toolkit has been modified by Hashim Moosavi to improve text classification of Naive Bayes through filtering by stop words, implementing TF IDF etc.
+Parsimmon is a wee linguistics toolkit for iOS written in Swift written by Ayaka Nonaka (https://github.com/ayanonagon). This toolkit has been modified by Hashim Moosavi to improve text classification of Naive Bayes through stop word filtering, implementing TF IDF etc.
 
 ## Examples
 
