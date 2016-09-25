@@ -40,7 +40,7 @@ public struct Tagger: Analyzer {
         @param options Linguistic tagger options
         @return The tagged tokens
     */
-    public func tagWordsInText(text: String, options: NSLinguisticTaggerOptions? = nil) -> [TaggedToken] {
+    public func tagWordsInText(_ text: String, options: NSLinguisticTagger.Options? = nil) -> [TaggedToken] {
         return analyze(self, text: text, options: options).map { (token, tag) in
             TaggedToken(token: token, tag: tag)
         }
