@@ -22,9 +22,10 @@
 
 import Foundation
 
-func argmax<T, U: Comparable>(_ elements: [(T, U)]) -> T? {
+func argmax<T, U: Comparable>(_ elements: [(T, U)]) -> (T?,U?) {
     if let start = elements.first {
-        return elements.reduce(start) { $0.1 > $1.1 ? $0 : $1 }.0
+        let returnValue: (T,U) = elements.reduce(start) { $0.1 > $1.1 ? $0 : $1 }
+        return (returnValue.0, returnValue.1)
     }
-    return nil
+    return (nil, nil)
 }

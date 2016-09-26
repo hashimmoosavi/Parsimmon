@@ -107,7 +107,7 @@ open class NaiveBayesClassifier {
         @param text The text to classify
         @return The category classification
     */
-    open func classify(_ text: String) -> Category? {
+    open func classify(_ text: String) -> (Category?, Double?) {
         let tokens = tokenizer.tokenize(text)
         return classifyTokens(tokens)
     }
@@ -118,15 +118,17 @@ open class NaiveBayesClassifier {
         @param text The tokenized text to classify
         @return The category classification if one was found, or nil if one wasn’t
     */
-    open func classifyTokens(_ tokens: [Word]) -> Category? {
+    open func classifyTokens(_ tokens: [Word]) -> (Category?, Double?) {
         // Compute argmax_cat [log(P(C=cat)) + sum_token(log(P(W=token|C=cat)))]
-        return argmax(categoryOccurrences.map { (category, count) -> (Category, Double) in
+        let intent: (Category?, Double?) = argmax(categoryOccurrences.map { (category, count) -> (Category, Double) in
             let pCategory = self.P(category)
             let score = tokens.reduce(log(pCategory)) { (total, token) in
                 total + log((self.P(category, token) + smoothingParameter) / (pCategory + smoothingParameter + Double(self.wordCount)))
             }
             return (category, score)
         })
+        
+        return intent
     }
 
     // MARK: - Probabilites
